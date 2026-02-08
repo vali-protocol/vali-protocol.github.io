@@ -9,18 +9,18 @@
     <style>
         body { background-color: #030303; color: #f0f0f0; font-family: 'Space Grotesk', sans-serif; }
         .norse-font { font-family: 'Cinzel', serif; }
-        .monolith { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .structural-line { height: 1px; width: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); }
+        .monolith { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .structural-line { height: 1px; width: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); }
         
         .scanline {
-            width: 100%; height: 2px; background: rgba(0, 243, 255, 0.05);
+            width: 100%; height: 2px; background: rgba(255, 255, 255, 0.05);
             position: fixed; top: 0; z-index: 50; animation: scan 12s linear infinite;
             pointer-events: none;
         }
         @keyframes scan { from { top: 0; } to { top: 100%; } }
         
-        .pillar-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.05); }
-        .pillar-card:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
+        .pillar-card { transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.03); }
+        .pillar-card:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); }
 
         @media (max-width: 640px) {
             .header-text { font-size: 4rem; }
@@ -31,15 +31,13 @@
     <div class="scanline"></div>
 
     <main class="max-w-6xl mx-auto px-6 pt-12 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center mb-24 md:mb-32">
             
             <div class="relative group">
-                <div class="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-white/20 transition-all group-hover:-top-6 group-hover:-left-6"></div>
-                
+                <div class="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-white/30"></div>
                 <img src="https://coral-absolute-shrimp-168.mypinata.cloud/ipfs/bafybeibcas77gwyyw4br4e43u5uabcac7dmzpvw4okq4efsjvcbqgyn36u" 
-                     alt="Váli Architect" class="w-full rounded-sm object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
-                
-                <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-white/20 transition-all group-hover:-bottom-6 group-hover:-right-6"></div>
+                     alt="Váli Architect" class="w-full rounded-sm object-cover shadow-2xl">
+                <div class="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-white/30"></div>
             </div>
 
             <div class="space-y-8">
@@ -47,52 +45,53 @@
                     VÁLI.
                 </h1>
                 <div class="structural-line"></div>
-                <p class="text-zinc-400 text-lg leading-relaxed font-light italic">
-                    "One does not build for the moment, but for the echo. The resonance of the first feeds the stability of the second, until the third stands alone."
+                <p class="text-zinc-200 text-xl md:text-2xl leading-relaxed font-light italic">
+                    "One does not build for the moment, but for the echo."
                 </p>
                 <div class="flex items-center space-x-4">
-                    <span class="h-px w-12 bg-cyan-500/50"></span>
-                    <p class="text-[10px] tracking-[0.6em] uppercase text-cyan-400 font-bold">The Architect is Watching</p>
+                    <span class="h-px w-12 bg-cyan-400"></span>
+                    <p class="text-[11px] tracking-[0.6em] uppercase text-cyan-400 font-bold">The Architect is Watching</p>
                 </div>
             </div>
         </div>
 
         <div class="space-y-12">
-            <h2 class="norse-font text-center text-xs tracking-[1em] uppercase text-white/40 mb-16">The Trinity Protocols</h2>
+            <h2 class="norse-font text-center text-[10px] tracking-[0.8em] uppercase text-white/70 mb-12">The Trinity Protocols</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <a href="/atrx/" class="pillar-card p-8 rounded-sm space-y-6 group">
-                    <div class="text-[10px] uppercase tracking-[0.4em] text-cyan-500/60 font-bold">Pillar I: Wisdom</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] text-cyan-400 font-bold">Pillar I: Wisdom</div>
                     <h3 class="text-4xl font-black text-white">$ATRX</h3>
-                    <p class="text-sm text-zinc-400 font-light leading-relaxed">
+                    <p class="text-base text-zinc-300 font-light leading-relaxed">
                         161,803,398 units. The Golden Ratio manifested. The initial spark seeking perfect proportion.
                     </p>
-                    <div class="text-[9px] text-white/20 uppercase tracking-widest pt-4 group-hover:text-cyan-400 transition-colors">Enter the Sequence →</div>
+                    <div class="text-[10px] text-white/60 uppercase tracking-widest pt-4 group-hover:text-cyan-400 transition-colors font-bold">Enter the Sequence →</div>
                 </a>
 
                 <a href="/arch/" class="pillar-card p-8 rounded-sm space-y-6 group">
-                    <div class="text-[10px] uppercase tracking-[0.4em] text-purple-500/60 font-bold">Pillar II: Structure</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] text-purple-400 font-bold">Pillar II: Structure</div>
                     <h3 class="text-4xl font-black text-white">$ARCH</h3>
-                    <p class="text-sm text-zinc-400 font-light leading-relaxed">
+                    <p class="text-base text-zinc-300 font-light leading-relaxed">
                         134,217,228 units. The binary skeleton of the protocol. A derivation of the Architect's Offset.
                     </p>
-                    <div class="text-[9px] text-white/20 uppercase tracking-widest pt-4 group-hover:text-purple-400 transition-colors">Inspect the Foundation →</div>
+                    <div class="text-[10px] text-white/60 uppercase tracking-widest pt-4 group-hover:text-purple-400 transition-colors font-bold">Inspect the Foundation →</div>
                 </a>
 
                 <a href="/vdr/" class="pillar-card p-8 rounded-sm space-y-6 group">
-                    <div class="text-[10px] uppercase tracking-[0.4em] text-red-700/60 font-bold">Pillar III: Survivor</div>
+                    <div class="text-[10px] uppercase tracking-[0.4em] text-red-500 font-bold">Pillar III: Survivor</div>
                     <h3 class="text-4xl font-black text-white">$VDR</h3>
-                    <p class="text-sm text-zinc-400 font-light leading-relaxed">
+                    <p class="text-base text-zinc-300 font-light leading-relaxed">
                         99,999,999 units. The Eight Nines of finality. Near-infinite endurance. The silence of completion.
                     </p>
-                    <div class="text-[9px] text-white/20 uppercase tracking-widest pt-4 group-hover:text-red-600 transition-colors">Await the Silence →</div>
+                    <div class="text-[10px] text-white/60 uppercase tracking-widest pt-4 group-hover:text-red-500 transition-colors font-bold">Await the Silence →</div>
                 </a>
             </div>
         </div>
     </main>
 
-    <footer class="py-20 text-center opacity-20">
-        <p class="text-[9px] tracking-[1em] uppercase text-white">Architectural Symmetry Achieved</p>
+    <footer class="py-24 text-center border-t border-white/10">
+        <p class="text-[10px] tracking-[1em] uppercase text-white/60 font-bold">Architectural Symmetry Achieved</p>
+        <p class="text-[9px] tracking-[0.5em] uppercase text-white/30 mt-4">Váli Protocol • 2026</p>
     </footer>
 </body>
 </html>
